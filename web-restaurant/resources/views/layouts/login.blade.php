@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Login</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -13,13 +13,16 @@
     <link rel="stylesheet" href="{{asset('css/css/mdb.min.css')}}" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="{{asset('css/css/style.css')}}" />
+    <!-- login wrapper  -->
+    <link rel="stylesheet" href="{{asset('css/login_wrapper.css')}}" />
+
 </head>
 <body>
       <!--Main Navigation-->
   <header>
     <style>
       #intro {
-        background-image: url(https://znews-photo.zadn.vn/w660/Uploaded/ngotno/2020_07_15/ioi.jpg);
+        background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
         height: 100vh;
       }
 
@@ -33,15 +36,16 @@
       .navbar .nav-link {
         color: #fff !important;
       }
+
     </style>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+        <!-- <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
           <strong>MDB</strong>
-        </a>
+        </a> -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
           aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
@@ -49,37 +53,46 @@
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#intro">Home</a>
+              <a class="nav-link" aria-current="page" href="#intro">Trang chủ</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#" rel="nofollow"
+                target="_blank">Đơn hàng</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                target="_blank">Learn Bootstrap 5</a>
+              <a class="nav-link" href="#" target="_blank">Liên hệ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
+              <a class="nav-link" href="#" target="_blank">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Giỏ hàng</a>
             </li>
           </ul>
 
           <ul class="navbar-nav d-flex flex-row">
             <!-- Icons -->
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+              <a class="nav-link" href="#" rel="nofollow"
                 target="_blank">
                 <i class="fab fa-youtube"></i>
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+              <a class="nav-link" href="#" rel="nofollow" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+              <a class="nav-link" href="#" rel="nofollow" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+              <a class="nav-link" href="#" rel="nofollow" target="_blank">
                 <i class="fab fa-github"></i>
               </a>
             </li>
@@ -95,16 +108,19 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-md-8">
-              <form class="bg-white rounded shadow-5-strong p-5">
+              <form actions="#" method="post" class="bg-white rounded shadow-5-strong p-5" >
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form1Example1" class="form-control" />
+                  <input type="email" id="form1Example1" class="form-control" required/>
                   <label class="form-label" for="form1Example1">Email address</label>
+                  <div class="alert alert-danger" role="alert">
+                  <strong>Lỗi </strong>
+                  </div>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form1Example2" class="form-control" />
+                  <input type="password" id="form1Example2" class="form-control" required/>
                   <label class="form-label" for="form1Example2">Password</label>
                 </div>
 
@@ -123,9 +139,10 @@
                   <div class="col text-center">
                     <!-- Simple link -->
                     <a href="#!">Forgot password?</a>
+                    <br>
+                    <p class="bg-drankgrey">Bạn đã có tài khoản? <a href="#!">Đăng nhập</a></p>
                   </div>
                 </div>
-
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
               </form>
